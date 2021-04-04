@@ -1,0 +1,136 @@
+
+\subsection{Frequency tables}
+A frequency distribution is a table that shows “classes” or “intervals” of data 
+entries with a count of the number of entries in each class. The frequency $f$ of 
+a class is the number of data entries in the class. Each class will have a 
+“lower class limit” and an “upper class limit” which can be interpreted as the 
+lowest and highest numbers in each class. The “class width” is defined as the 
+distance between the lower limits of consecutive classes. The range is the difference 
+between the maximum and minimum data entries. Before constructing a frequency table, 
+some consideration should be given about the range of values in the dataset. In 
+situations where there are to many class intervals, the likelihood of reducing the 
+bulkiness of the data is highly unlikely. On the other hand, if the total number 
+of classes is minimal, then the shape of the distribution itself cannot be successfully 
+determined. Generally, for most datasets 6–14 intervals is considered ideal.[2] However, 
+this should not be interpreted as the defacto standard as a lot depends on the 
+type of dataset. With that being said, the following are a few general guidelines 
+one can follow when constructing a frequency table. 
+
+\begin{itemize}
+    \item The ideal number of classes can be determined or approximated by the 
+    formulas: $C = 1 + 3.3\log{n}$ (Sturge's formula) or $C = \sqrt{n}$ 
+    (Square-root choice formula) where $n$ is the total number of observations in 
+    the dataset. 
+    \item Calculate the range of the data by finding the minimum and maximum data 
+    values. 
+    \item  Using the range of the data find the width of the classes, using the
+    formula $h = \frac{\mbox{range}}{\mbox{number of classes}}$.
+    \item To find the class limits use the minimum data entry as the lower limit 
+    of the first class. Then to get the lower limit of the next class, add the 
+    class width. Continue until you reach the last class. Then find the upper 
+    limits of each class.
+\end{itemize}
+
+\includegraphics[height=4cm]{example-image-a} 
+
+\subsection{Frequency Distribution Graphs}
+A frequency distribution graph is a diagrammatic illustration of the information 
+in the frequency table. 
+
+\subsubsection{Histogram}
+A histogram is a graphical representation of the variable of interest in the X axis and the number of observations
+(frequency) in the Y axis. Percentages can be used if the
+objective is to compare two histograms having different
+number of subjects. A histogram is used to depict the frequency
+when data are measured on an interval or a ratio scale. Figure 1
+depicts a histogram constructed for the data given in Table 1.
+A bar diagram and a histogram may look the same but there
+are three important differences between them:[3,4]
+In a histogram, there is no gap between the bars as the variable
+is continuous. A bar diagram will have space between the bars.
+All the bars need not be of equal width in a histogram (depends
+on the class interval), whereas they are equal in a bar diagram.
+The area of each bar corresponds to the frequency in a
+histogram whereas in a bar diagram, it is the height [Figure 1].
+
+\includegraphics[height=4cm]{example-image-a} 
+
+\subsubsection{Frequency polygon}
+A frequency polygon is constructed by connecting all
+midpoints of the top of the bars in a histogram by a straight
+line without displaying the bars. A frequency polygon aids in
+the easy comparison of two frequency distributions. When
+the total frequency is large and the class intervals are narrow,
+the frequency polygon becomes a smooth curve known as the
+frequency curve. A frequency polygon illustrating the data in
+Table 1 is shown in Figure 2.
+
+\includegraphics[height=4cm]{example-image-a} 
+
+\subsubsection{Box and whisker plot}
+This graph, first described by Tukey in 1977, can also be
+used to illustrate the distribution of data. There is a vertical
+or horizontal rectangle (box), the ends of which correspond
+to the upper and lower quartiles (75th and 25th percentile,
+respectively). Hence the middle 50\% of observations are
+represented by the box. The length of the box indicates the
+variability of the data. The line inside the box denotes the
+median (sometimes marked as a plus sign). The position of
+the median indicates whether the data are skewed or not.
+If the median is closer to the upper quartile, then they are
+negatively skewed and if it is near the lower quartile, then
+positively skewed.
+The lines outside the box on either side are known as whiskers
+[Figure 3]. These whiskers are 1.5 times the length of the
+box, i.e., the interquartile range (IQR). The end of whiskers is
+called the inner fence and any value outside it is an outlier. If
+the distribution is symmetrical, then the whiskers are of equal
+length. If the data are sparse on one side, the corresponding side
+whisker will be short. The outer fence (usually not marked)
+is at a distance of three times the IQR on either side of the
+box. The reason behind having the inner and outer fence at
+1.5 and 3 times the IQR, respectively, is the fact that 95\% of
+observations fall within 1.5 times the IQR, and it is 99\% for
+3 times the IQR.[5]
+
+\includegraphics[height=4cm]{example-image-a} 
+
+\subsubsection{Bubble Chart}
+A Bubble Chart is a multi-variable graph that is a cross between a Scatterplot 
+and a Proportional Area Chart. Like a Scatterplot, Bubble Charts use a Cartesian 
+coordinate system to plot points along a grid where the X and Y axis are separate 
+variables. However. unlike a Scatterplot, each point is assigned a label or 
+category (either displayed alongside or on a legend). Each plotted point then 
+represents a third variable by the area of its circle. Colours can also be used 
+to distinguish between categories or used to represent an additional data variable. 
+Time can be shown either by having it as a variable on one of the axis or by 
+animating the data variables changing over time.
+
+Bubble Charts are typically used to compare and show the relationships between 
+categorised circles, by the use of positioning and proportions. The overall 
+picture of Bubble Charts can be used to analyse for patterns/correlations. Too 
+many bubbles can make the chart hard to read, so Bubble Charts have a limited 
+data size capacity. This can be somewhat remedied by interactivity: clicking or 
+hovering over bubbles to display hidden information, having an option to 
+reorganise or filter out grouped categories. Like with Proportional Area Charts, 
+the sizes of the circles need to be drawn based on the circle’s area, not its 
+radius or diameter. Not only will the size of the circles change exponentially, 
+but this will lead to misinterpretations by the human visual system.
+
+\includegraphics[height=4cm]{example-image-a} 
+
+\subsubsection{Multi-set Bar Chart}
+Also known as a Grouped Bar Chart or Clustered Bar Chart. This variation of a Bar 
+Chart is used when two or more data series are plotted 
+side-by-side and grouped together under categories, all on the same axis. Like a 
+Bar Chart, the length of each bar is used to show discrete, numerical comparisons 
+amongst categories. Each data series is assigned an individual colour or a 
+varying shade of the same colour, in order to distinguish them. Each group of 
+bars are then spaced apart from each other. The use of Multi-set Bar Charts is 
+usually to compare grouped variables or categories to other groups with those 
+same variables or category types. Multi-set Bar Charts can also be used to compare 
+mini Histograms to each other, so each bar in the group would represent the 
+significant intervals of a variable. The downside of Multi-set Bar Charts is that 
+they become harder to read the more bars you have in one group.
+
+\includegraphics[height=4cm]{example-image-a} 
