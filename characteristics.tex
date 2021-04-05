@@ -6,7 +6,7 @@ Oftentimes when frequency distribution data is graphed it is common for a signif
 amount of data points to cluster around a central value. This clustering is known 
 as the central location or central tendency of a frequency distribution. Once the 
 value that a distribution centers around is known, it can be used to further 
-characterize all of the data in the distribution. To calculate a central value 
+characterize the rest of the data in the distribution. To calculate a central value 
 several methods exist with each method producing somewhat of a different value. 
 Collectively these methods can be refereed to as Measures of central location and 
 the three most commonly used are:
@@ -23,21 +23,75 @@ level of measurement, but it is most meaningful for nominal and ordinal values.
 The median can only be used on data that exhibits some type of order and the mean 
 can only be used on interval and ratio values of measurement because it requires 
 equal spacing between adjacent values or scores in the scale. Most of the time 
-depending on the dataset, only one or two of these measures are applicable in real 
-world uses cases.
+depending on the dataset, only one or two of these measures are applicable at any 
+given time.
 
 \subsection{Measures of Dispersion}
 
-A second property of frequency distributions is variation or dispersion, which is 
-the spread of a distribution out from its central value. Figure 3.3 shows the 
-example where three curves/distributions have the same dispersion. Some of the 
-measures of dispersion that we often use are the range, variance, and the standard 
-deviation. The dispersion of a frequency distribution is independent of its central 
-location. This fact is illustrated by Figure 3.4 which shows the graph of three 
-theoretical frequency distributions that have the same central location but 
-different amounts of dispersion
+A second property of frequency distributions is dispersion or variation, which is 
+the spread of a distribution out from its central value. The dispersion of a frequency 
+distribution is independent of its central location. Figure ?? illustrates this 
+fact, by showing the graph of three theoretical frequency distributions that have 
+the same central location but different amounts of dispersion. Some of the more common
+measures of dispersion that are used include the following:
+
+\begin{enumerate}
+    \item Range: the difference between the largest and the smallest observation 
+    in the dataset.
+    \item Interquartile Range: the difference between the 25\textsuperscript{th} and 
+    75\textsuperscript{th} percentile (also called the first and third quartile).
+    \item Standard Deviation: Measures the spread of data about the mean. 
+\end{enumerate}
+
+Much like measures of central location, measures of dispersion have their own
+strengths and weaknesses. The biggest advantage of the range is that it is easy 
+to calculate but has many disadvantages to be aware of. For instance, it is very 
+sensitive to outliers and does not use all the observations in a data set. Additionally, 
+it is more informative to provide the actual minimum and the maximum values rather 
+than providing the range a singular value.
+
+The interquartile range has an important advantage given that it can be used as 
+a measure of variability if there are extreme values in the dataset that are not 
+recorded exactly. This leads to the other advantageous feature that the interquartile 
+range is not affected by extreme values. However, the main disadvantage of the 
+interquartile range is that it is not amenable to mathematical manipulation.
+
+Standard Deviation (SD) is perhaps the most famous and widely used measure for dispersion
+calculation. The reason why is because if the observations are from a normal distribution, 
+then, 68\% of observations lie between mean $\pm1$ SD, 95\% of observations lie 
+between mean $\pm{2}$ SD and 99.7\% of observations lie between mean $\pm{3}$ SD. 
+The other advantage of SD is that along with the mean it can be used to detect 
+skewness. However, its biggest disadvantage is its inability to be used as an 
+appropriate measure of dispersion for skewed data.
+
 \subsection{Skewness}
-\subsection{Kurtosis}
+
+Skewness is a measure of symmetry, or more precisely, the lack of symmetry. A 
+distribution is symmetric if it looks the same to the left and right of the center 
+point. The skewness for a normal distribution is zero, and any symmetric data 
+should typically have a skewness near zero. Negative values for the skewness 
+indicate that a dataset has a majority of its data points skewed left while positive 
+values indicate a majority of data points are skewed right. For context when we
+say "skewed left", we mean that the left tail is long relative to the right tail. 
+Similarly, "skewed right" means that the right tail is long relative to the 
+left tail. We can define the skewness with the formula:
+\begin{equation}
+    Skewness = \sum{}{} \frac{(X_i-\bar{X})^3}{ns^3}
+\end{equation}
+where $n$ is the sample size, $X_i$ is the $i\textsuperscript{th}$ $X$ value, $X$ 
+is the average and $s$ is the sample standard deviation. However, most software 
+tools such as Microsoft Excel take into account the sample size as well. Therefore,
+we can slightly modify the formula to the following:
+\begin{equation}
+    \begin{split}
+        Skewness & = \frac{n}{(n-1)(n-2)}\sum{}{} \frac{(X_i-\bar{X})^3}{s^3} \\
+        & = \frac{n}{s^3(n-1)(n-2)}(S_{above} - S_{below})
+    \end{split}
+\end{equation}
+In practice, as the sample size increases the difference in the results that these two 
+formulas produce is relatively small so either one can be used with confidence. 
+
+%\subsection{Kurtosis}
 %\begin{enumerate}
 %    \item Measures of central tendency and location (mean, median, mode).
 %    \item Measures of dispersion (range, variance, standard deviation).
