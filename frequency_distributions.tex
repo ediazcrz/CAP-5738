@@ -1,35 +1,42 @@
-
 \subsection{Frequency tables}
-A frequency distribution is a table that shows “classes” or “intervals” of data 
+A frequency distribution is a table that shows ``classes`` or ``intervals`` of data 
 entries with a count of the number of entries in each class. The frequency $f$ of 
 a class is the number of data entries in the class. Each class will have a 
-“lower class limit” and an “upper class limit” which can be interpreted as the 
+``lower limit``' and an ``upper limit`` which can be interpreted as the 
 lowest and highest numbers in each class. The “class width” is defined as the 
-distance between the lower limits of consecutive classes. The range is the difference 
-between the maximum and minimum data entries. Before constructing a frequency table, 
-some consideration should be given about the range of values in the dataset. In 
-situations where there are to many class intervals, the likelihood of reducing the 
-bulkiness of the data is highly unlikely. On the other hand, if the total number 
-of classes is minimal, then the shape of the distribution itself cannot be successfully 
-determined. Generally, for most datasets 6–14 intervals is considered ideal.[2] However, 
-this should not be interpreted as the defacto standard as a lot depends on the 
-type of dataset. With that being said, the following are a few general guidelines 
-one can follow when constructing a frequency table. 
+distance between the lower limits of consecutive classes. Before constructing a 
+frequency table, some consideration should be given about the range of values in 
+the dataset. In situations where there are to many class intervals, the likelihood 
+of reducing the bulkiness of the data is highly unlikely. On the other hand, if 
+the total number of classes is minimal, then the shape of the distribution itself 
+cannot be successfully determined. Generally, for most datasets $6–14$ intervals 
+is considered an ideal benchmark. However, this should not be interpreted as the 
+defacto standard as a lot depends on the dataset itself. With that being said, 
+the following are a few general guidelines one can follow when constructing a 
+frequency table. 
 
-\begin{itemize}
+\begin{enumerate}
     \item The ideal number of classes can be determined or approximated by the 
-    formulas: $C = 1 + 3.3\log{n}$ (Sturge's formula) or $C = \sqrt{n}$ 
-    (Square-root choice formula) where $n$ is the total number of observations in 
-    the dataset. 
+    formulas: 
+    \begin{align}
+        C = 1 + 3.3\log{n} %\\ \eqname{Sturge's Rule}
+    \end{align}
+    \begin{align}
+        C = \sqrt{n} %\\ \eqname{Square Root Choice Rule}
+    \end{align}
+    where $n$ is the total number of observations in the dataset. 
     \item Calculate the range of the data by finding the minimum and maximum data 
     values. 
-    \item  Using the range of the data find the width of the classes, using the
-    formula $h = \frac{\mbox{range}}{\mbox{number of classes}}$.
+    \item  Using the range, find the width of the classes which can be determined
+    using the formula:
+    \begin{equation}
+        \mbox{Class Width} = \frac{\mbox{range}}{\mbox{number of classes}}
+    \end{equation}
     \item To find the class limits use the minimum data entry as the lower limit 
     of the first class. Then to get the lower limit of the next class, add the 
     class width. Continue until you reach the last class. Then find the upper 
     limits of each class.
-\end{itemize}
+\end{enumerate}
 
 \includegraphics[height=4cm]{example-image-a} 
 
@@ -38,32 +45,36 @@ A frequency distribution graph is a diagrammatic illustration of the information
 in the frequency table. 
 
 \subsubsection{Histogram}
-A histogram is a graphical representation of the variable of interest in the X axis and the number of observations
-(frequency) in the Y axis. Percentages can be used if the
-objective is to compare two histograms having different
-number of subjects. A histogram is used to depict the frequency
-when data are measured on an interval or a ratio scale. Figure 1
-depicts a histogram constructed for the data given in Table 1.
-A bar diagram and a histogram may look the same but there
-are three important differences between them:[3,4]
-In a histogram, there is no gap between the bars as the variable
-is continuous. A bar diagram will have space between the bars.
-All the bars need not be of equal width in a histogram (depends
-on the class interval), whereas they are equal in a bar diagram.
-The area of each bar corresponds to the frequency in a
-histogram whereas in a bar diagram, it is the height [Figure 1].
+A histogram is a graphical representation of the variable of interest in the 
+$X$ axis versus the number of observations (frequency) in the $Y$ axis. Percentages 
+can be used if the goal is to compare two histograms with a different number of 
+subjects. Typically, a histogram is used to depict the frequency when data is 
+measured against an interval or ratio scale. Coincidently, there is a striking
+resemblance between a bar diagram and a histogram. However, they are nothing alike 
+with three important distinctions between them. First off, in a histogram, there 
+is no gap between the bars as the variable is continuous. A bar diagram will 
+oftentimes have a noticeable amount of space between the bars.
+Secondly, in histograms the width of the bars have meaning and do not need to be 
+of equal length as this depends on the class interval. Whereas in a bar diagram all
+the bars widths are equal in length. Finally, the area of each bar corresponds 
+to the frequency in a histogram whereas in a bar diagram, it is the height. Figure
+XX ... 
 
 \includegraphics[height=4cm]{example-image-a} 
 
-\subsubsection{Frequency polygon}
-A frequency polygon is constructed by connecting all
-midpoints of the top of the bars in a histogram by a straight
-line without displaying the bars. A frequency polygon aids in
-the easy comparison of two frequency distributions. When
-the total frequency is large and the class intervals are narrow,
-the frequency polygon becomes a smooth curve known as the
-frequency curve. A frequency polygon illustrating the data in
-Table 1 is shown in Figure 2.
+\subsubsection{Frequency Polygon}
+A frequency polygon is very similar to a histogram. In fact, they are almost 
+identical except that frequency polygons can be used to compare sets of data or 
+to display a cumulative frequency distribution. A cumulative distribution is a 
+form of a frequency distribution that represents the sum of a class and all the
+classes below it. They are extremely useful when you need to determine the frequency 
+up to a specific threshold or to easily compare two frequency distributions quickly.
+Visually, there is also a slight difference where histograms tend to have rectangles 
+while a frequency polygon resembles a line graph. Constructing a frequency polygon 
+is done by connecting all midpoints of the top of the bars in a histogram by a 
+straight line without displaying the bars. Also, when the total frequency is large 
+and the class intervals are narrow, the frequency polygon becomes a smooth curve 
+known as the frequency curve. 
 
 \includegraphics[height=4cm]{example-image-a} 
 
