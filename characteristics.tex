@@ -19,19 +19,19 @@ and the three most commonly used are:
 \end{enumerate}
 
 These three measures are best used in combination with one another. This is because 
-they have complementary strengths and limitations. The mode can be used for any 
+they have complementary strengths and weaknesses. The mode can be used for any 
 level of measurement, but it is most meaningful for nominal and ordinal values.
 The median can only be used on data that exhibits some type of order and the mean 
-can only be used on interval and ratio values of measurement because it requires 
+can only be used on interval and ratio values of measurement. This because it requires 
 equal spacing between adjacent values or scores in the scale. Most of the time 
 depending on the dataset, only one or two of these measures are applicable at any 
 given time.
 
 \subsection{Measures of Dispersion}
 
-A second property of frequency distributions is dispersion or variation, which is 
-the spread of a distribution out from its central value. The dispersion of a frequency 
-distribution is independent of its central location. Figure ?? illustrates this 
+A second property of frequency distributions is dispersion also know as variation, which 
+is defined as the spread of a distribution out from its central value. The dispersion 
+of a frequency distribution is independent of its central location. Figure ?? illustrates this 
 fact, by showing the graph of three theoretical frequency distributions that have 
 the same central location but different amounts of dispersion. Some of the more common
 measures of dispersion that are used include the following:
@@ -44,26 +44,27 @@ measures of dispersion that are used include the following:
     \item Standard Deviation: Measures the spread of data about the mean. 
 \end{enumerate}
 
-Much like measures of central location, measures of dispersion have their own
-strengths and weaknesses. The biggest advantage of the range is that it is easy 
-to calculate but has many disadvantages to be aware of. For instance, it is very 
-sensitive to outliers and does not use all the observations in a data set. Additionally, 
-it is more informative to provide the actual minimum and the maximum values rather 
-than providing the range a singular value.
+Much like measures of central location, measures of dispersion have their own set of
+strengths and weaknesses. For instance, the biggest advantage of the range is that 
+it is very easy to calculate. But the main disadvantage to be aware of is its 
+sensitivity to outliers. Moreover, the range that does not take into account all 
+the observations in a data set. Likewise, in some situations it be more informative 
+to actually provide the minimum and maximum values rather than the range a singular value.
 
-The interquartile range has an important advantage given that it can be used as 
+The interquartile range has a rather interesting advantage given that it can be used as 
 a measure of variability if there are extreme values in the dataset that are not 
 recorded exactly. This leads to the other advantageous feature that the interquartile 
 range is not affected by extreme values. However, the main disadvantage of the 
 interquartile range is that it is not amenable to mathematical manipulation.
 
-Standard Deviation (SD) is perhaps the most famous and widely used measure for dispersion
-calculation. The reason why is because if the observations are from a normal distribution, 
-then, 68\% of observations lie between mean $\pm1$ SD, 95\% of observations lie 
-between mean $\pm{2}$ SD and 99.7\% of observations lie between mean $\pm{3}$ SD. 
-The other advantage of SD is that along with the mean it can be used to detect 
-skewness. However, its biggest disadvantage is its inability to be used as an 
-appropriate measure of dispersion for skewed data.
+Standard Deviation (SD) is perhaps the most famous and widely used measure in dispersion
+calculations. The reason why is because if the observations are from a normal distribution, 
+then, we can assume that 68\% of observations lie between mean $\pm1$ SD, 95\% of 
+observations lie between mean $\pm{2}$ SD and 99.7\% of observations lie between 
+mean $\pm{3}$ SD. The other advantage of standard deviation is that along with the 
+mean it can be used to detect skewness. However, its biggest disadvantage is its 
+inability to be used as an appropriate measure of dispersion for data this is 
+already skewed.
 
 \subsection{Skewness}
 
@@ -75,7 +76,8 @@ indicate that a dataset has a majority of its data points skewed left while posi
 values indicate a majority of data points are skewed right. For context when we
 say "skewed left", we mean that the left tail is long relative to the right tail. 
 Similarly, "skewed right" means that the right tail is long relative to the 
-left tail. We can define the skewness with the formula:
+left tail. Luckily, we can define the skewness of a distribution with the 
+following formula:
 \begin{equation}
     Skewness = \sum{}{} \frac{(X_i-\bar{X})^3}{ns^3}
 \end{equation}
@@ -89,8 +91,9 @@ we can slightly modify the formula to the following:
         & = \frac{n}{s^3(n-1)(n-2)}(S_{above} - S_{below})
     \end{split}
 \end{equation}
-In practice, as the sample size increases the difference in the results that these two 
-formulas produce is relatively small so either one can be used with confidence. 
+In practice, as the sample size increases the difference in the results that these 
+two formulas potentially produce is relatively small so either one can be used with 
+confidence. 
 
 %\subsection{Kurtosis}
 %\begin{enumerate}
