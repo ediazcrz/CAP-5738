@@ -23,23 +23,23 @@ they have complementary strengths and weaknesses. The mode can be used for any
 level of measurement, but it is most meaningful for nominal and ordinal values.
 The median can only be used on data that exhibits some type of order and the mean 
 can only be used on interval and ratio values of measurement. This because it requires 
-equal spacing between adjacent values or scores in the scale. Most of the time 
-depending on the dataset, only one or two of these measures are applicable at any 
-given time.
+equal spacing between adjacent values or scores in the scale \cite{c12}. Most of 
+the time depending on the dataset, only one or two of these measures are applicable 
+at any given time.
 
 \subsection{Measures of Dispersion}
 
 A second property of frequency distributions is dispersion also know as variation, which 
 is defined as the spread of a distribution out from its central value. The dispersion 
-of a frequency distribution is independent of its central location. Figure ?? illustrates this 
-fact, by showing the graph of three theoretical frequency distributions that have 
+of a frequency distribution is independent of its central location. Figure \ref{figure:central_location} 
+illustrates this fact, by showing the graph of three theoretical frequency distributions that have 
 the same central location but different amounts of dispersion. Some of the more common
 measures of dispersion that are used include the following:
 
 \begin{enumerate}
     \item Range: the difference between the largest and the smallest observation 
     in the dataset.
-    \item Interquartile Range: the difference between the 25\textsuperscript{th} and 
+    \item Interquartile Range (IQR): the difference between the 25\textsuperscript{th} and 
     75\textsuperscript{th} percentile (also called the first and third quartile).
     \item Standard Deviation: Measures the spread of data about the mean. 
 \end{enumerate}
@@ -66,6 +66,13 @@ mean it can be used to detect skewness. However, its biggest disadvantage is its
 inability to be used as an appropriate measure of dispersion for data this is 
 already skewed.
 
+\begin{figure}
+    \centering
+        \includegraphics[height=5cm]{figures/diff_central_location.png}
+    \caption{Three curves identical in shape with different central locations \cite{c13}.}
+    \label{figure:central_location}
+\end{figure} 
+
 \subsection{Skewness}
 
 Skewness is a measure of symmetry, or more precisely, the lack of symmetry. A 
@@ -81,7 +88,7 @@ following formula:
 \begin{equation}
     Skewness = \sum{}{} \frac{(X_i-\bar{X})^3}{ns^3}
 \end{equation}
-where $n$ is the sample size, $X_i$ is the $i\textsuperscript{th}$ $X$ value, $X$ 
+where $n$ is the sample size, $X_i$ is the $i\textsuperscript{th}$ $X$ value, $\bar{X}$ 
 is the average and $s$ is the sample standard deviation. However, most software 
 tools such as Microsoft Excel take into account the sample size as well. Therefore,
 we can slightly modify the formula to the following:
