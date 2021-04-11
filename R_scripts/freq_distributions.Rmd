@@ -1,0 +1,30 @@
+---
+title: "Frequency Distributions"
+author: "Ernesto Diaz"
+output: html_document
+---
+
+```{r}
+set.seed(1234)
+df = data.frame(
+    gender=factor(rep(c("F", "M"), each=200)),
+    age=round(c(rnorm(200, mean=25, sd=5), rnorm(200, mean=30, sd=5)))
+)
+head(df)
+```
+```{r}
+library(ggplot2)
+
+hist_plot = ggplot(df, aes(x=age)) + geom_histogram(color="black", fill="lightblue", binwidth=2) + xlab("Age") + ylab("Total") + ggtitle('Age Distribution Between Males and Females') + theme(plot.title = element_text(hjust = 0.5))
+hist_plot
+```
+
+```{r}
+poly_plot = ggplot(df, aes(x=age)) + geom_freqpoly(color="black", fill="lightblue", binwidth=2) + xlab("Age") + ylab("Total") + ggtitle('Age Distribution Between Males and Females') + theme(plot.title = element_text(hjust = 0.5))
+poly_plot
+```
+
+```{r}
+box_and_whisker = ggplot(df, aes(x=age, y=gender)) + geom_boxplot(fill='lightblue', color="black") + xlab("Total") + ylab("Age") + ggtitle('Age Distribution Between Males and Females') + theme(plot.title = element_text(hjust = 0.5))
+box_and_whisker
+```
