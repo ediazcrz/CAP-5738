@@ -43,7 +43,7 @@ frequency table.
 \begin{table}[H]
     \centering
     \caption{Age Frequency's for Males}
-    \scalebox{.8} {
+    \scalebox{.9} {
         \begin{tabular}{c@{\hspace*{1.5cm}}c@{\hspace*{0cm}}l}
             \hline
             Age & Frequency \\ 
@@ -59,6 +59,7 @@ frequency table.
             26 & 10 \\			
             27 & 19 \\	
             \hline
+            \multicolumn{2}{l}{$^{\mathrm{a}}$Sample of a Table footnote.}
         \end{tabular}
     }
     \label{table:oodbmsTerminology}
@@ -92,13 +93,12 @@ ratio. Secondly, in histograms the width of the bars have a meaning and do not
 need to be of equal length as this depends on the class interval. Whereas in a bar 
 chart all the bars widths are equal in length. Finally, in histograms the area 
 of each bar corresponds to the frequency whereas in a bar chart, it is the height \cite{c10}. 
-Figure \ref{figure:histogram} is an example of a histogram created using a random age 
-distribution generated to represent a hypothetical male and female population. 
-Unfortunately, this figure also exposes a major weakness when interpreting 
-histograms. It is extremely difficult and practically impossible to extract the 
-exact amount of ``input`` unless the frequencies are listed above the bars. Luckily,
-there is a version of a histogram that does just this called a frequency histogram
-should that feature become a requirement. 
+Figure \ref{figure:histogram} is an example of a histogram created in \textit{R} 
+using the \textit{ggplot2} library. Unfortunately, this figure also exposes a major 
+weakness when interpreting histograms. It is extremely difficult and practically 
+impossible to extract the exact amount of ``input`` unless the frequencies are listed 
+above the bars. Luckily, there is a version of a histogram that does just this 
+called a frequency histogram should that feature become a requirement. 
 
 \begin{figure}[H]
     \centering
@@ -120,7 +120,7 @@ is done by connecting all midpoints of the top of the bars in a histogram by a
 straight line without displaying the bars. Also, when the total frequency is large 
 and the class intervals are narrow, the frequency polygon has the tendency to become 
 a smooth curve which is formally known as the ``frequency curve``. Figure \ref{figure:freq_polygon}
-is an example of a frequency polygon using the same data from the histogram. The 
+is an example of a frequency polygon built using the same tools as the histogram. The 
 main advantage of a frequency polygon involves their ability to show central 
 tendencies and dispersion clearly on large datasets. However, given their close 
 relationship to histograms, unsurprisingly frequency polygons share many of their 
@@ -169,8 +169,8 @@ should be used in combination with other visualizations to further analyze a dat
 \end{figure} 
 
 \subsubsection{Bubble Chart}
-A Bubble chart is a type of multi-variable graph that can be views as a variation 
-of the Scatterplot. In Bubble Charts, the additional dimension of the data is represented 
+A Bubble chart is a type of multi-variable graph that can be viewed as a variation 
+of the Scatterplot. In Bubble charts, the additional dimension of the data is represented 
 in the size of the bubble. Much like a Scatterplot, Bubble charts are plotted on 
 a cartesian coordinate system where the X and Y axis represent separate variables. 
 However, unlike a Scatterplot the Bubble chart assigns a label or category for
@@ -180,20 +180,27 @@ Bubble chart by either having it as a variable on one of the axis or by animatin
 the data variables changing over time through the use of software tools. In practice,
 Bubble charts are used to compare and show the relationships between categorized 
 circles, through the use of positioning and proportions. The overall picture of 
-Bubble Charts can be used to analyse for patterns and correlations. If to many bubbles 
-are used it can make the chart difficult to read and comprehend, therefore Bubble 
-charts have a limited data size capacity. However, this is mostly true for static 
-versions of Bubble charts as this limitation is somewhat remedied for their interactive 
-counterparts. When built with software tools, clicking or hovering over bubbles 
-to display hidden information or having an option to reorganize and filter out 
-grouped categories helps to increase the number of potential bubbles in the chart. 
-Furthermore, to avoid misinterpretations of the bubbles their size should be based 
-on the area of a circle, not the radius or diameter. This is to avoid the side 
-effect of the circles changing exponentially and unintentionally tricking the 
-human eye into interpreting drastic changes in the dataset that are potentially 
-not true.
+Bubble charts can be used to analyze for patterns and correlations. But if to many bubbles 
+are used it can make the chart difficult to read and comprehend. Therefore Bubble 
+charts have a limited data size capacity which is illustrated in Figure \ref{figure:bubble_chart}.  
+However, this is mostly true for static versions of Bubble charts as this limitation 
+is somewhat remedied for their interactive counterparts. 
 
-\includegraphics[height=4cm]{example-image-a} 
+\begin{figure}[H]
+    \centering
+        \includegraphics[scale=0.4]{figures/bubble_chart.png}
+    \caption{Bubble chart built in R using the ggplot2 library.}
+    \label{figure:bubble_chart}
+\end{figure} 
+
+When built with software 
+tools, clicking or hovering over bubbles to display hidden information or having 
+an option to reorganize and filter out grouped categories helps to increase the 
+number of potential bubbles in the chart. Furthermore, to avoid misinterpretations 
+of the bubbles their size should be based on the area of a circle, not the radius 
+or diameter. This is to avoid the side effect of the circles changing exponentially 
+and unintentionally tricking the human eye into interpreting drastic changes in 
+the dataset that are potentially not true.
 
 \subsubsection{Multi-set Bar Chart}
 Multi-set Bar Charts which can also be refereed to as Grouped Bar Charts or Clustered 
