@@ -3,7 +3,7 @@ that are consistent regardless of the visualization used.
 
 \subsection{Measures of Central Location}
 
-Oftentimes when frequency distribution data is graphed it is common for a significant
+Oftentimes when a frequency distribution is graphed it is common for a significant
 amount of data points to cluster around a central value. This clustering is referred to
 as the central location or central tendency of a frequency distribution. Once the 
 value that a distribution centers around is known, it can be used to further 
@@ -49,7 +49,7 @@ strengths and weaknesses. For instance, the biggest advantage of the range is th
 it is very easy to calculate. But the main disadvantage to be aware of is its 
 sensitivity to outliers. Moreover, the range that does not take into account all 
 the observations in a data set. Likewise, in some situations it be more informative 
-to actually provide the minimum and maximum values rather than the range a singular value.
+to actually provide the minimum and maximum values rather than the range a singular value \cite{c1}.
 
 The interquartile range has a rather interesting advantage given that it can be used as 
 a measure of variability if there are extreme values in the dataset that are not 
@@ -61,14 +61,14 @@ Standard Deviation (SD) is perhaps the most famous and widely used measure in di
 calculations. The reason why is because if the observations are from a normal distribution, 
 then, we can assume that 68\% of observations lie between mean $\pm1$ SD, 95\% of 
 observations lie between mean $\pm{2}$ SD and 99.7\% of observations lie between 
-mean $\pm{3}$ SD. The other advantage of standard deviation is that along with the 
+mean $\pm{3}$ SD \cite{c1}. The other advantage of standard deviation is that along with the 
 mean it can be used to detect skewness. However, its biggest disadvantage is its 
 inability to be used as an appropriate measure of dispersion for data this is 
 already skewed.
 
 \begin{figure}
     \centering
-        \includegraphics[height=5cm]{figures/diff_central_location.png}
+        \includegraphics[height=4cm]{figures/diff_central_location.png}
     \caption{Three curves identical in shape with different central locations \cite{c13}.}
     \label{figure:central_location}
 \end{figure} 
@@ -83,13 +83,13 @@ indicate that a dataset has a majority of its data points skewed left while posi
 values indicate a majority of data points are skewed right. For context when we
 say "skewed left", we mean that the left tail is long relative to the right tail. 
 Similarly, "skewed right" means that the right tail is long relative to the 
-left tail. Luckily, we can define the skewness of a distribution with the 
+left tail \cite{c13}. Luckily, we can define the skewness of a distribution with the 
 following formula:
 \begin{equation}
     Skewness = \sum{}{} \frac{(X_i-\bar{X})^3}{ns^3}
 \end{equation}
 where $n$ is the sample size, $X_i$ is the $i\textsuperscript{th}$ $X$ value, $\bar{X}$ 
-is the average and $s$ is the sample standard deviation. However, most software 
+is the average and $s$ is the sample standard deviation \cite{c14}. However, most software 
 tools such as Microsoft Excel take into account the sample size as well. Therefore,
 we can slightly modify the formula to the following:
 \begin{equation}
@@ -101,11 +101,3 @@ we can slightly modify the formula to the following:
 In practice, as the sample size increases the difference in the results that these 
 two formulas potentially produce is relatively small so either one can be used with 
 confidence. 
-
-%\subsection{Kurtosis}
-%\begin{enumerate}
-%    \item Measures of central tendency and location (mean, median, mode).
-%    \item Measures of dispersion (range, variance, standard deviation).
-%    \item The extent of symmetry/asymmetry (skewness).
-%    \item The flatness or peakedness (kurtosis).
-%\end{enumerate}
