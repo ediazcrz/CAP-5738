@@ -9,7 +9,7 @@ frequency table, some consideration should be given about the range of values in
 the dataset. In situations where there are to many class intervals, the likelihood 
 of reducing the bulkiness of the data is highly unlikely. On the other hand, if 
 the total number of classes is minimal, then the shape of the distribution itself 
-cannot be successfully determined. Generally, for most datasets $6–14$ intervals 
+cannot be successfully determined. Generally, for most datasets 6-14 intervals 
 is considered an ideal benchmark. However, this should not be interpreted as the 
 defacto standard as a lot depends on the dataset itself. With that being said, 
 the following are a few general guidelines one can follow when constructing a 
@@ -19,12 +19,14 @@ frequency table.
     \item The ideal number of classes can be determined or approximated by the 
     formulas: 
     \begin{align}
-        C = 1 + 3.3\log{n} %\\ \eqname{Sturge's Rule}
+        C = 1 + 3.3\log{n} \label{sturges}
     \end{align}
     \begin{align}
-        C = \sqrt{n} %\\ \eqname{Square Root Choice Rule}
+        C = \sqrt{n} \label{rootChoice}
     \end{align}
-    where $n$ is the total number of observations in the dataset. 
+    where $n$ is the total number of observations in the dataset. Formally, 
+    equation \ref{sturges} is known as Sturge's Rule while equation \ref{rootChoice}
+    is known as the Square Root Choice Rule. 
     \item Calculate the range of the data by finding the minimum and maximum data 
     values. 
     \item  Using the range, find the width of the classes which can be determined
@@ -40,6 +42,15 @@ frequency table.
 
 \includegraphics[height=4cm]{example-image-a} 
 
+The main advantage of a frequency table is their ability to quickly reveal 
+outliers and even significant trends within a dataset with not much more than 
+a quick inspection. However, the milage might vary on this as extremely 
+large complex datasets might be to difficult and long to inspect visually from the
+get go. But a major disadvantage of a frequency table is that they are not always 
+readily. For instance, there may be situations where unless other visualization 
+graphs are used, characteristics such as skewness may not be readily apparent in 
+a frequency table.   
+
 \subsection{Frequency Distribution Graphs}
 A frequency distribution graph is a diagrammatic illustration of the information 
 in the frequency table. 
@@ -47,38 +58,60 @@ in the frequency table.
 \subsubsection{Histogram}
 A histogram is a graphical representation of the variable of interest in the 
 $X$ axis versus the number of observations (frequency) in the $Y$ axis. Percentages 
-can be used if the goal is to compare two histograms with a different number of 
-subjects. Typically, a histogram is used to depict the frequency when data is 
-measured against an interval or ratio scale. Coincidently, there is a striking
-resemblance between a bar diagram and a histogram. However, they are nothing alike 
-with three important distinctions between them. First off, in a histogram, there 
-is no gap between the bars as the variable is continuous. A bar diagram will 
-oftentimes have a noticeable amount of space between the bars.
-Secondly, in histograms the width of the bars have meaning and do not need to be 
-of equal length as this depends on the class interval. Whereas in a bar diagram all
-the bars widths are equal in length. Finally, the area of each bar corresponds 
-to the frequency in a histogram whereas in a bar diagram, it is the height. Figure
-XX ... 
+can also be used if the goal is to compare two histograms with a different number of 
+categories. Typically, a histogram is used to depict the frequency when data is 
+measured against an interval or ratio scale. They are great to highlight skewness
+and work well with large ranges in a dataset. Coincidentally, there is a striking
+resemblance between a bar chart and a histogram. However, they are nothing alike 
+with three important distinctions between them to be aware of. First off, in a histogram there 
+are no gaps between bars as the variable is continuous. In a bar chart, oftentimes 
+there is a noticeable amount of space between the bars depending on the aspect
+ratio. Secondly, in histograms the width of the bars have a meaning and do not 
+need to be of equal length as this depends on the class interval. Whereas in a bar 
+chart all the bars widths are equal in length. Finally, in histograms the area 
+of each bar corresponds to the frequency whereas in a bar chart, it is the height. 
+Figure \ref{histogram} is an example of a histogram created using a random age 
+distribution generated to represent a hypothetical male and female population. 
+Unfortunately, this figure also exposes a major weakness when interpreting 
+histograms. It is extremely difficult and practically impossible to extract the 
+exact amount of ``input`` unless the frequencies are listed above the bars. Luckily,
+there is a version of a histogram that does just this called a frequency histogram
+should that feature become a requirement. 
 
-\includegraphics[height=4cm]{example-image-a} 
+\begin{figure}[H]
+    \centering
+        \includegraphics[height=5cm]{figures/histogram.png}
+    \caption{Histogram built in R using the ggplot2 library.}
+    \label{figure:histogram}
+\end{figure} 
 
 \subsubsection{Frequency Polygon}
 A frequency polygon is very similar to a histogram. In fact, they are almost 
-identical except that frequency polygons can be used to compare sets of data or 
+identical but differ in that frequency polygons can be used to compare sets of data or 
 to display a cumulative frequency distribution. A cumulative distribution is a 
 form of a frequency distribution that represents the sum of a class and all the
 classes below it. They are extremely useful when you need to determine the frequency 
 up to a specific threshold or to easily compare two frequency distributions quickly.
-Visually, there is also a slight difference where histograms tend to have rectangles 
+Visually, there is also a slight difference where histograms use rectangles 
 while a frequency polygon resembles a line graph. Constructing a frequency polygon 
 is done by connecting all midpoints of the top of the bars in a histogram by a 
 straight line without displaying the bars. Also, when the total frequency is large 
-and the class intervals are narrow, the frequency polygon becomes a smooth curve 
-known as the frequency curve. 
+and the class intervals are narrow, the frequency polygon has the tendency to become 
+a smooth curve which is formally known as the ``frequency curve``. Figure \ref{figure:freq_polygon}
+is an example of a frequency polygon using the same data from the histogram. The 
+main advantage of a frequency polygon involves their ability to show central 
+tendencies and dispersion clearly on large datasets. However, given their close 
+relationship to histograms, unsurprisingly frequency polygons share many of their 
+downsides too such as the loss of details on relative numbers and proportions. 
 
-\includegraphics[height=4cm]{example-image-a} 
+\begin{figure}[H]
+    \centering
+        \includegraphics[height=5cm]{figures/freq_polygon.png}
+    \caption{Frequency Polygon built in R using the ggplot2 library.}
+    \label{figure:freq_polygon}
+\end{figure}  
 
-\subsubsection{Box and whisker plot}
+\subsubsection{Box and Whisker Plot}
 First described by John Tukey in 1977, the box and whisker plot is a histogram
 type visualization that can be used to illustrate frequency distributions. Constructing
 a box and whisker plot requires a vertical or horizontal rectangle (box) where the 
@@ -88,7 +121,7 @@ of the data while the line inside represents the median. Interestingly enough,
 the position of the median visually indicates whether or not the dataset is skewed. 
 In fact for instances where the median is closer to the upper quartile we say that 
 the dataset is positively skewed and for instances where the median is closer to 
-the lower quartile  we say it is negatively skewed. 
+the lower quartile we say it is negatively skewed. 
 The lines outside the box on either side are known as whiskers and each whisker 
 is roughly 1.5 times the length of the box. The ends of whiskers are called the 
 ``inner fence``' and any data point beyond its boundary is considered an outlier. 
@@ -97,11 +130,21 @@ where if symmetrical, then the whiskers will be of equal length. But if the data
 is sparse on one side, the corresponding side whisker will be short. The ``outer fence``
 which is roughly defined as the section farthest away from the whiskers is at a 
 distance of three times the IQR on either side of the box. The reasoning behind 
-having the inner and outer fence at 1.5 and 3 times the IQR, is due to the fact 
+having the inner and outer fence at 1.5 and 3 times the IQR, is due to the assumption 
 that 95\% of observations fall within 1.5 times the IQR, and another 99\% for 3 
-times the IQR.
+times the IQR. The biggest advantage of the box and whisker plot is its ability 
+to handle large amounts of data and clearly highlight outliers as illustrated in 
+Figure \ref{figure:box_and_whisker}. However, the biggest downside is its inability to
+to retain the exact values and details of a distribution. Unfortunately, this type
+of visualization is meant to only show a simple summary of the distribution and
+should be used in combination with other visualizations to further analyze a dataset.
 
-\includegraphics[height=4cm]{example-image-a} 
+\begin{figure}[H]
+    \centering
+        \includegraphics[scale=0.4]{figures/box_and_whisker.png}
+    \caption{Box and Whisker Plot built in R using the ggplot2 library.}
+    \label{figure:box_and_whisker}
+\end{figure} 
 
 \subsubsection{Bubble Chart}
 A Bubble chart is a type of multi-variable graph that can be views as a variation 
