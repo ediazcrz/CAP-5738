@@ -10,7 +10,7 @@ the dataset. In situations where there are to many class intervals, the likeliho
 of reducing the bulkiness of the data is highly unlikely. On the other hand, if 
 the total number of classes is minimal, then the shape of the distribution itself 
 cannot be successfully determined. Generally, for most datasets 6-14 intervals 
-is considered an ideal benchmark. However, this should not be interpreted as the 
+is considered an ideal benchmark \cite{c7}. However, this should not be interpreted as the 
 defacto standard as a lot depends on the dataset itself. With that being said, 
 the following are a few general guidelines one can follow when constructing a 
 frequency table. 
@@ -98,7 +98,7 @@ using the \textit{ggplot2} library. Unfortunately, this figure also exposes a ma
 weakness when interpreting histograms. It is extremely difficult and practically 
 impossible to extract the exact amount of ``input`` unless the frequencies are listed 
 above the bars. Luckily, there is a version of a histogram that does just this 
-called a frequency histogram should that feature become a requirement. 
+called a frequency histogram should that feature become a necessity. 
 
 \begin{figure}[!ht]
     \centering
@@ -109,7 +109,7 @@ called a frequency histogram should that feature become a requirement.
 
 \subsubsection{Frequency Polygon}
 A frequency polygon is very similar to a histogram. In fact, they are almost 
-identical but differ in that frequency polygons can be used to compare sets of data or 
+identical but differ in that frequency polygons are used to compare sets of data or 
 to display a cumulative frequency distribution. A cumulative distribution is a 
 form of a frequency distribution that represents the sum of a class and all the
 classes below it. They are extremely useful when you need to determine the frequency 
@@ -117,7 +117,7 @@ up to a specific threshold or to easily compare two frequency distributions quic
 Visually, there is also a slight difference where histograms use rectangles 
 while a frequency polygon resembles a line graph. Constructing a frequency polygon 
 is done by connecting all midpoints of the top of the bars in a histogram by a 
-straight line without displaying the bars. Also, when the total frequency is large 
+straight line and then removing the bars. Furthermore, when the total frequency is large 
 and the class intervals are narrow, the frequency polygon has the tendency to become 
 a smooth curve which is formally known as the ``frequency curve``. Figure \ref{figure:freq_polygon}
 is an example of a frequency polygon built using the same tools as the histogram. The 
@@ -141,14 +141,14 @@ ends are used to represent the upper and lower quartiles. The middle 50\% of obs
 is represented by the box itself and the length of the box indicates the variability 
 of the data while the line inside represents the median. Interestingly enough, 
 the position of the median visually indicates whether or not the dataset is skewed. 
-In fact for instances where the median is closer to the upper quartile we say that 
+In fact, for instances where the median is closer to the upper quartile we say that 
 the dataset is positively skewed and for instances where the median is closer to 
 the lower quartile we say it is negatively skewed. 
 The lines outside the box on either side are known as whiskers and each whisker 
 is roughly 1.5 times the length of the box. The ends of whiskers are called the 
 ``inner fence``' and any data point beyond its boundary is considered an outlier. 
 Furthermore, the dataset distribution plays a role in the length of the whiskers 
-where if symmetrical, then the whiskers will be of equal length. But if the dataset 
+where if symmetrical the whiskers will be of equal length. But if the dataset 
 is sparse on one side, the corresponding side whisker will be short. The ``outer fence``
 which is roughly defined as the section farthest away from the whiskers is at a 
 distance of three times the IQR on either side of the box. The reasoning behind 
@@ -159,7 +159,7 @@ to handle large amounts of data and clearly highlight outliers as illustrated in
 Figure \ref{figure:box_and_whisker}. However, the biggest downside is its inability to
 to retain the exact values and details of a distribution. Unfortunately, this type
 of visualization is meant to only show a simple summary of the distribution and
-should be used in combination with other visualizations to further analyze a dataset.
+should be used in combination with other visualizations when analyzing a dataset.
 
 \begin{figure}[!ht]
     \centering
@@ -172,7 +172,7 @@ should be used in combination with other visualizations to further analyze a dat
 A Bubble chart is a type of multi-variable graph that can be viewed as a variation 
 of the Scatterplot. In Bubble charts, the additional dimension of the data is represented 
 in the size of the bubble. Much like a Scatterplot, Bubble charts are plotted on 
-a cartesian coordinate system where the X and Y axis represent separate variables. 
+a cartesian coordinate system where the $X$ and $Y$ axis represent separate variables. 
 However, unlike a Scatterplot the Bubble chart assigns a label or category for
 each point. Colors can also be used to distinguish between categories or used to 
 represent an additional data variable. It is also possible to convey time in the
@@ -181,10 +181,11 @@ the data variables changing over time through the use of software tools. In prac
 Bubble charts are used to compare and show the relationships between categorized 
 circles, through the use of positioning and proportions. The overall picture of 
 Bubble charts can be used to analyze for patterns and correlations. But if to many bubbles 
-are used it can make the chart difficult to read and comprehend. Therefore Bubble 
-charts have a limited data size capacity which is illustrated in Figure \ref{figure:bubble_chart}.  
-However, this is mostly true for static versions of Bubble charts as this limitation 
-is somewhat remedied for their interactive counterparts. 
+are used it can make the chart difficult to read and comprehend as illustrated in 
+Figure \ref{figure:bubble_chart}. Therefore, Bubble charts should be considered as
+having a limited size capacity when constructed. However, this is mostly true for 
+static versions of Bubble charts as this limitation is somewhat nonexistent for 
+their interactive counterparts. 
 
 \begin{figure}[!ht]
     \centering
@@ -211,5 +212,5 @@ an individual color, in order to distinguish amongst the categories. Furthermore
 each group of bars is spaced apart to increase visual comprehension. Multi-set 
 Bar charts are best suited to compare grouped variables or categories to other 
 groups with those same variables or category types. The downside of Multi-set Bar 
-charts is that they become harder to comprehend as more bars are added in one 
+charts is that they become harder to comprehend as more bars are added into a 
 group.
