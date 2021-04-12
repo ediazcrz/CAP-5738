@@ -47,21 +47,20 @@ measures of dispersion that are used include the following:
 Much like measures of central location, measures of dispersion have their own set of
 strengths and weaknesses. For instance, the biggest advantage of the range is that 
 it is very easy to calculate. But the main disadvantage to be aware of is its 
-sensitivity to outliers. Moreover, the range that does not take into account all 
-the observations in a data set. Likewise, in some situations it be more informative 
+sensitivity to outliers. Moreover, the range does not take into account all 
+the observations in a data set. Likewise, in some situations it might be more informative 
 to actually provide the minimum and maximum values rather than the range a singular value \cite{c1}.
 
-The interquartile range has a rather interesting advantage given that it can be used as 
-a measure of variability if there are extreme values in the dataset that are not 
-recorded exactly. This leads to the other advantageous feature that the interquartile 
-range is not affected by extreme values. However, the main disadvantage of the 
-interquartile range is that it is not amenable to mathematical manipulation.
+The interquartile range has a rather interesting advantage given that it is not 
+affected by extreme values. Due to this the interquartile range can be used as 
+a measure of variability if extreme outliers do exist in the dataset. However, its 
+main disadvantage is that it is not amenable to mathematical manipulation.
 
 Standard Deviation (SD) is perhaps the most famous and widely used measure in dispersion
 calculations. The reason why is because if the observations are from a normal distribution, 
-then, we can assume that 68\% of observations lie between mean $\pm1$ SD, 95\% of 
-observations lie between mean $\pm{2}$ SD and 99.7\% of observations lie between 
-mean $\pm{3}$ SD \cite{c1}. The other advantage of standard deviation is that along with the 
+then we can assume that 68\% of observations lie between the mean and $\pm1$ SD, 95\% of 
+observations lie between the mean and $\pm{2}$ SD and 99.7\% of observations lie between 
+the mean and $\pm{3}$ SD \cite{c1}. The other advantage of standard deviation is that along with the 
 mean it can be used to detect skewness. However, its biggest disadvantage is its 
 inability to be used as an appropriate measure of dispersion for data this is 
 already skewed.
@@ -83,7 +82,7 @@ indicate that a dataset has a majority of its data points skewed left while posi
 values indicate a majority of data points are skewed right. For context when we
 say "skewed left", we mean that the left tail is long relative to the right tail. 
 Similarly, "skewed right" means that the right tail is long relative to the 
-left tail \cite{c13}. Luckily, we can define the skewness of a distribution with the 
+left \cite{c13}. Luckily, we can define the skewness of a distribution with the 
 following formula:
 \begin{equation}
     Skewness = \sum{}{} \frac{(X_i-\bar{X})^3}{ns^3}
