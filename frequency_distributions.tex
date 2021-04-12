@@ -40,7 +40,7 @@ frequency table.
     limits of each class.
 \end{enumerate}
 
-\begin{table}[H]
+\begin{table}[!ht]
     \centering
     \caption{Age Frequency's for Males}
     \scalebox{.9} {
@@ -100,7 +100,7 @@ impossible to extract the exact amount of ``input`` unless the frequencies are l
 above the bars. Luckily, there is a version of a histogram that does just this 
 called a frequency histogram should that feature become a requirement. 
 
-\begin{figure}[H]
+\begin{figure}[!ht]
     \centering
         \includegraphics[height=5cm]{figures/histogram.png}
     \caption{Histogram built in R using the ggplot2 library.}
@@ -126,7 +126,7 @@ tendencies and dispersion clearly on large datasets. However, given their close
 relationship to histograms, unsurprisingly frequency polygons share many of their 
 downsides too such as the loss of details on relative numbers and proportions. 
 
-\begin{figure}[H]
+\begin{figure}[!ht]
     \centering
         \includegraphics[height=5cm]{figures/freq_polygon.png}
     \caption{Frequency Polygon built in R using the ggplot2 library.}
@@ -161,9 +161,9 @@ to retain the exact values and details of a distribution. Unfortunately, this ty
 of visualization is meant to only show a simple summary of the distribution and
 should be used in combination with other visualizations to further analyze a dataset.
 
-\begin{figure}[H]
+\begin{figure}[!ht]
     \centering
-        \includegraphics[scale=0.4]{figures/box_and_whisker.png}
+        \includegraphics[height=5cm]{figures/box_and_whisker.png}
     \caption{Box and Whisker Plot built in R using the ggplot2 library.}
     \label{figure:box_and_whisker}
 \end{figure} 
@@ -186,21 +186,20 @@ charts have a limited data size capacity which is illustrated in Figure \ref{fig
 However, this is mostly true for static versions of Bubble charts as this limitation 
 is somewhat remedied for their interactive counterparts. 
 
-\begin{figure}[H]
+\begin{figure}[!ht]
     \centering
-        \includegraphics[scale=0.4]{figures/bubble_chart.png}
+    \includegraphics[height=5cm]{figures/bubble_chart.png}
     \caption{Bubble chart built in R using the ggplot2 library.}
     \label{figure:bubble_chart}
 \end{figure} 
 
-When built with software 
-tools, clicking or hovering over bubbles to display hidden information or having 
-an option to reorganize and filter out grouped categories helps to increase the 
-number of potential bubbles in the chart. Furthermore, to avoid misinterpretations 
-of the bubbles their size should be based on the area of a circle, not the radius 
-or diameter. This is to avoid the side effect of the circles changing exponentially 
-and unintentionally tricking the human eye into interpreting drastic changes in 
-the dataset that are potentially not true.
+When built with software tools, clicking or hovering over bubbles to display hidden 
+information or having an option to reorganize and filter out grouped categories 
+helps to increase the number of potential bubbles in the chart. Furthermore, to 
+avoid misinterpretations of the bubbles their size should be based on the area of 
+a circle, not the radius or diameter. This is to avoid the side effect of the circles 
+changing exponentially and unintentionally tricking the human eye into interpreting 
+drastic changes in the dataset that are potentially not true.
 
 \subsubsection{Multi-set Bar Chart}
 Multi-set Bar Charts which can also be refereed to as Grouped Bar Charts or Clustered 
@@ -214,5 +213,3 @@ Bar charts are best suited to compare grouped variables or categories to other
 groups with those same variables or category types. The downside of Multi-set Bar 
 charts is that they become harder to comprehend as more bars are added in one 
 group.
-
-\includegraphics[height=4cm]{example-image-a} 
